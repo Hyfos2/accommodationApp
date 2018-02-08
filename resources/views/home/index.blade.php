@@ -42,8 +42,8 @@
         }
 
         @media(max-width:576px){
-            .container{
-                margin-top:500px;
+            #containerData{
+                margin-top:5px;
             }
             #formId{
                  position: fixed; z-index:1030;
@@ -59,10 +59,26 @@
                 margin-top:-9px;
             }
             .row{
-                margin-top:180px;
+
             }
             #main{
-                            height:50px;
+                height:50px;
+                position: fixed;
+                z-index:1030;
+                right:0;
+                left:0;
+            }
+            #button1{
+                display: -moz-popup;
+                margin-top:60px;
+
+            }
+            #button2{
+
+            }
+            #searchForm {
+                margin-top:45px;
+
             }
 
         }
@@ -77,48 +93,45 @@
 <nav class="navbar navbar-light" style="background-color: #7FF9BA; top: 0;" id="main">
     @guest
         <ul class="navbar-nav">
-                <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ route('login') }}">Sign in</a>
-                <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ route('register') }}">Sign up</a>
+                <a  id="button1" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ route('login') }}">Sign in</a>
+                <a  id="button2" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ route('register') }}">Sign up</a>
         </ul>
     @endguest
     <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="">About Us</a>
 </nav>
 
+<main id="searchForm" class="container">
+
+        <form>
+            <div class="form-row" >
+                <div class="form-group col-md-6">
+                    <label></label>
+                    <input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="What are you searching for?">
+                </div>
+                <div class="form-group col-md-4">
+                    <label ></label>
+                    <input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Location">
+                </div>
+                <div class="form-group col-md-2" id="searchBtn">
+                    <label ></label>
+                    <button type="submit" class="form-control form-control-sm btn btn-primary" style=" font-size: 0.7rem;">Search</button>
+                    <hr>
+                </div>
+            </div>
+        </form>
+
+</main>
+
+{{--<a  id="button1" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ route('login') }}">Sign in</a>--}}
+{{--<a  id="button2" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ route('register') }}">Sign up</a>--}}
 {{--<div class="secondHeader">--}}
 
 
-    {{--<div  id="formId">--}}
 
-        {{--<div  class="col-md-12" style="height: 70px; margin-top: 70px;">--}}
-
-            {{--<form>--}}
-                {{--<div class="form-row" >--}}
-                    {{--<div class="form-group col-md-6">--}}
-                        {{--<label></label>--}}
-                        {{--<input type="text" class="form-control form-control-sm" id="inputEmail4" placeholder="What are you searching for?">--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group col-md-4">--}}
-                        {{--<label ></label>--}}
-                        {{--<input type="text" class="form-control form-control-sm" id="inputPassword4" placeholder="Location">--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group col-md-2" id="searchBtn">--}}
-                        {{--<label ></label>--}}
-                        {{--<button type="submit" class="form-control form-control-sm btn btn-primary" style=" font-size: 0.7rem;">Search</button>--}}
-                        {{--<hr>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</form>--}}
-
-        {{--</div>--}}
-
-    {{--</div>--}}
-{{--</div>--}}
-
-
-<div class="container" style="margin-top:150px;">
+<div class="container" id="containerData">
 
     
-    <div class="col-md-12" style="margin-top:10px;">
+    <div class="col-md-12">
 
 
         <div class="row">
